@@ -7,7 +7,7 @@
     <div class="card-body">
         <div class="row">
             @employer
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header " style="font-weight: bold">
                         YOUR OFFER
@@ -20,7 +20,7 @@
                 </div>
             </div>
             @endif
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header " style="font-weight: bold">
                         NO. OF OJT SEEKERS
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header " style="font-weight: bold">
                         NO. OF EMPLOYERS
@@ -45,7 +45,7 @@
                 </div>
             </div>
             @jobseeker
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header " style="font-weight: bold">
                         APPLICATIONS
