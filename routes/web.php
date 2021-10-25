@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth','verified'])->group(function () {
     Route::get('/profile/{user}', [ProfileController::class, 'setupProfile']);
     Route::post('/profile/{user}', [ProfileController::class, 'updateProfile']);
 
