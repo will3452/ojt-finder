@@ -12,8 +12,8 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    const TYPE_JOB_SEEKER = 'job_seeker';
-    const TYPE_EMPLOYER = 'employer';
+    const TYPE_JOB_SEEKER = 'OJT Applicant';
+    const TYPE_EMPLOYER = 'OJT Employer';
     const TYPE_ADMIN = 'admin';
 
     /**
@@ -32,6 +32,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'remember_token',
     ];
+
+    public function getNameAttribute()
+    {
+        return $this->first_name.', '. $this->middle_name.', '.$this->last_name;
+    }
 
     /**
      * The attributes that should be cast.
