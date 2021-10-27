@@ -14,7 +14,7 @@
                     {{-- <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="name" value="{{ old('type') }}" required autocomplete="name" autofocus> --}}
 
                     <select name="type" id="type" class="form-control @error('type') is-invalid @enderror" name="name" value="{{ old('type') }}">
-                        <option value="{{\App\Models\User::TYPE_JOB_SEEKER}}">OJT Application</option>
+                        <option value="{{\App\Models\User::TYPE_JOB_SEEKER}}">OJT Applicant</option>
                         <option value="{{\App\Models\User::TYPE_EMPLOYER}}">OJT Employer</option>
                     </select>
 
