@@ -18,6 +18,11 @@ class JobSeeker extends Resource
      */
     public static $model = \App\Models\JobSeeker::class;
 
+    public static function label()
+    {
+        return 'OJT Applicant';
+    }
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
