@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Application;
 use App\Models\Employer;
+use App\Observers\ApplicationObserver;
 use App\Observers\EmployerObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -30,5 +32,6 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         Employer::observe(EmployerObserver::class);
+        Application::observe(ApplicationObserver::class);
     }
 }

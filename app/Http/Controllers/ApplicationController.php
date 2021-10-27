@@ -37,4 +37,11 @@ class ApplicationController extends Controller
 
         return back();
     }
+
+    public function myApplications()
+    {
+        $applications = auth()->user()->applications;
+
+        return view('my-application', compact('applications'));
+    }
 }

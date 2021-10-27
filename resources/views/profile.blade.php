@@ -168,7 +168,7 @@
                                     About
                                 </td>
                                 <td>
-                                    <textarea name="about"></textarea>
+                                    <textarea name="about" required></textarea>
                                     @error('about')
                                         {{$message}}
                                     @enderror

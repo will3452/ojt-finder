@@ -38,6 +38,7 @@ Route::middleware(['auth','verified'])->group(function () {
 
     Route::post('/apply', [ApplicationController::class, 'submitApplication']);
     Route::get('/applications/{offer}', [ApplicationController::class, 'applicationIndex']);
+    Route::get('/my-applications', [ApplicationController::class, 'myApplications']);
 
     Route::post('/applications/{application}', [ApplicationController::class, 'applicationPost']);
 });

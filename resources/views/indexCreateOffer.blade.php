@@ -43,7 +43,7 @@
                                     @csrf
                                     <button class="btn btn-danger btn-sm">Delete</button>
                                 </form>
-                                <a class="btn btn-primary btn-sm" href="/applications/{{$offer->id}}">View Applications</a>
+                                <a class="btn btn-primary btn-sm" href="/applications/{{$offer->id}}">View Applications ({{$offer->applications()->where('status', \App\Models\Application::STATUS_PENDING)->count()}})</a>
                             </div>
                         </div>
                     @empty

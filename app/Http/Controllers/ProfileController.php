@@ -28,6 +28,7 @@ class ProfileController extends Controller
             'picture'=>''
         ]);
 
+
         $accountField = [
             'first_name'=>$data['first_name'],
             'middle_name'=>$data['middle_name'],

@@ -21,6 +21,9 @@
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
     @include('sweetalert::alert')
@@ -76,6 +79,14 @@
                             </li>
                             @endif
 
+                            @jobseeker
+                            <li class="nav-item">
+                                <a href="/my-applications" class="nav-link">
+                                    My Applications
+                                </a>
+                            </li>
+                            @endif
+
                             <li class="nav-item">
                                 <a href="/profile/{{auth()->id()}}" class="nav-link">
                                     Profile
@@ -116,5 +127,10 @@
 
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let table = new DataTable('#example');
+        });
+    </script>
 </body>
 </html>
