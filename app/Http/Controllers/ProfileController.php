@@ -18,7 +18,9 @@ class ProfileController extends Controller
     public function updateProfile(User $user)
     {
         $data = request()->validate([
-            'name'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'middle_name'=>'required',
             'password'=>'',
             'inline_address'=>'required',
             'city'=>'required',
@@ -27,7 +29,9 @@ class ProfileController extends Controller
         ]);
 
         $accountField = [
-            'name'=>$data['name'],
+            'first_name'=>$data['first_name'],
+            'middle_name'=>$data['middle_name'],
+            'last_name'=>$data['last_name'],
             'password'=>bcrypt($data['password']),
         ];
 

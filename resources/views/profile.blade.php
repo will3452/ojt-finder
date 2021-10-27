@@ -89,11 +89,33 @@
                         <table class="table table-bordered mt-2">
                             <tr>
                                 <td>
-                                    Name
+                                    First Name
                                 </td>
                                 <td>
-                                    <input type="text" name="name" required value="{{auth()->user()->name}}">
-                                    @error('name')
+                                    <input type="text" name="first_name" required value="{{auth()->user()->first_name}}">
+                                    @error('first_name')
+                                        {{$message}}
+                                    @enderror
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Middle Name
+                                </td>
+                                <td>
+                                    <input type="text" name="middle_name" required value="{{auth()->user()->middle_name}}">
+                                    @error('middle_name')
+                                        {{$message}}
+                                    @enderror
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Last Name
+                                </td>
+                                <td>
+                                    <input type="text" name="last_name" required value="{{auth()->user()->last_name}}">
+                                    @error('last_name')
                                         {{$message}}
                                     @enderror
                                 </td>
