@@ -43,7 +43,7 @@
                         <li class="nav-item">
                             <form action="/offers">
                                 <div class="input-group">
-                                    <input type="search" name="keyword" class="form-control form-control-sm"> <button class="btn btn-sm btn-primary">search</button>
+                                    <input type="search" name="keyword"  placeholder="Search your IT practicum..." class="form-control form-control-sm"> <button class="btn btn-sm btn-primary">search</button>
                                 </div>
                             </form>
                         </li>
