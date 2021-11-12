@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Location</label>
-                            <input type="text" name="location" class="form-control" required>
+                            <input type="text" value="{{auth()->user()->address}}" name="location" class="form-control" required>
                         </div>
 
                         <div class="form-group">

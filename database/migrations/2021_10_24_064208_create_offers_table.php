@@ -23,7 +23,6 @@ class CreateOffersTable extends Migration
             $table->string('city');
             $table->text('description');
             $table->string('attachment')->nullable();
-
             $table->foreignId('user_id');
             $table->timestamps();
         });
