@@ -28,7 +28,12 @@
 <body>
     @include('sweetalert::alert')
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm py-3">
+        @auth
+        <nav class="navbar navbar-expand-md navbar-light {{auth()->user()->type != \App\Models\User::TYPE_EMPLOYER  ? 'bg-warning' : 'bg-light'}} shadow-sm py-3">
+            @else
+            <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm py-3">
+        @endauth
+
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="/logo.png" style="width:50px;"/>
